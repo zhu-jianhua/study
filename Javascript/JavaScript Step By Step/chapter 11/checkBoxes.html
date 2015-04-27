@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Using check boxes with the order form</title>
+<script type = "text/javascript">
+function prepza() {
+	var checkboxes = document.forms["pizzaform"].toppingcheck.length;
+	var newelement = document.createElement("p");
+	newelement.setAttribute("id","orderheading");
+	document.body.appendChild(newelement);
+	newelement.appendChild(document.createTextNode("This pizza will have:"));
+	
+	for (var i = 0; i < checkboxes; i++) {
+		if (document.forms["pizzaform"].toppingcheck[i].checked) {
+			var newelement = document.createElement("p");
+			newelement.setAttribute("id","newelement" + i);
+			document.body.appendChild(newelement);
+			newelement.appendChild(document.createTextNode( 
+				document.forms["pizzaform"].toppingcheck[i].value));
+		}
+	}
+}
+</script>
+</head>
+<body>
+<form id="pizzaform" action="#" onsubmit="return false;">
+<p>Toppings:</p>
+<input type="checkbox" id="topping1" value="Sausage" name="toppingcheck" />Sausage<br/>
+<input type="checkbox" id="topping2" value="Pepperoni" name="toppingcheck" />Pepperoni<br/>
+<input type="checkbox" id="topping3" value="Ham" name="toppingcheck" />Ham<br/>
+<input type="checkbox" id="topping4" value="Green Peppers" name="toppingcheck" />Green Peppers<br/>
+<input type="checkbox" id="topping5" value="Mushrooms" name="toppingcheck" />Mushrooms<br/>
+<input type="checkbox" id="topping6" value="Onions" name="toppingcheck" />Onions<br/>
+<input type="checkbox" id="topping7" value="Pineapple" name="toppingcheck" />Pineapple<br/>
+<p><input type="submit" id="formsubmit" name="formsubmit" value="Prep Pizza" onclick="prepza();" /></p>
+</form>
+</body>
+</html>

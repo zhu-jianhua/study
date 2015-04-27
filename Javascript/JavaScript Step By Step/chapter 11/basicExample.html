@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>A Basi Example</title>
+<script type = "text/javascript" >
+function formValid() {
+	if (document.forms[0].textname.value.length == 0) {
+		alert("Name is required.");
+		return false;
+	} else {
+		alert("Hello " + document.forms[0].textname.value);
+		return true;
+	}
+}
+</script>
+</head>
+<body>
+<p>A Basic Form Example</p>
+<form action="#" onsubmit="return formValid();">
+<p>Name <em>(Required)</em>: <input id="textbox1" name="textname" type="text" /></p>
+<p><input id="submitbutton1" type="submit" /></p>
+</form>
+</body>
+</html>

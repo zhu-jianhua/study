@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Variable scope example</title>
+<h2><u>Computer monitor specifications</u></h2>
+<script type="text/javascript">
+//Initialize global variables
+color = "green";
+var size = 15;
+
+//Declare a monitor specification function
+function monitorSpecs(){
+	//Declare and set variables inside function
+	color = "purple";
+	price = "$300.00";
+	var size = 17;
+	document.write("The ",size," inch ",color);
+	document.write(" monitor is ",price);
+}
+
+//Display results of monitorSpecs() function
+monitorSpecs();
+
+//Display variable values outside of function
+document.write("<br>The ",size," inch ",color);
+document.write(" monitor is ",price);
+</script>
+</head>
+<body>
+
+</body>
+</html>

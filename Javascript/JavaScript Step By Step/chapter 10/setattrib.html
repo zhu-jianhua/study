@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Set Attrib</title>
+</head>
+<body>
+<a onclick="showattribs()" href="http://www.braingia.org" id="braingialink">Steve Suehring's Web Site</a>
+<script type = "text/javascript" >
+	var a1 = document.getElementById("braingialink");
+	alert(a1.getAttribute("href"));
+	a1.setAttribute("href","http://www.microsoft.com");
+	alert(a1.getAttribute("href"));
+</script>
+</body>
+</html>

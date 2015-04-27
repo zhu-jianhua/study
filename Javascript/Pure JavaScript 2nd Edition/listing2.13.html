@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The conditional operator and if statement are compared</title>
+<script type="text/javascript">
+//Set the mail flag to "YES"
+mailFlag = "YES";
+var message1;
+var message2;
+
+//Standard if statement
+if(mailFlag == "YES"){
+	message1 = "You have email";
+}
+else{
+	message1 = "No email.";
+}
+
+//Same statement using conditional operator
+message2 = (mailFlag == "YES") ? "You have email" : "No email";
+
+//Print the message to the screen
+document.write("The if satement returns: ",message1, "<br>");
+document.write("The conditonal operator returns: ",message2);
+</script>
+</head>
+<body>
+
+</body>
+</html>

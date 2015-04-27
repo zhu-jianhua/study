@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Example using a form for client-side validation</title>
+<script type="text/javascript">
+//Function checks to see that the personal 
+//information entered is valid.
+function validatePersonalInfo(){
+	//Declare variables to hold input values.
+	var _first = document.info.fname.value;
+	var _last = document.info.lname.value;
+	var _street = document.info.street.value;
+	var _city = document.info.city.value;
+	var _zip = document.info.zip.value;
+	var _phone = document.info.phone.value;
+	var _email = document.info.email.value;
+}
+	// Verify that the all input fields are filled in.
+	if(_first.toString() == ""){alert("Please enter a first name.");}
+	if(_last.toString() == ""){alert("Please enter a last name.");}
+	if(_street.toString() == ""){alert("Please enter your street name.");}
+	if(_city.toString() == ""){alert("Please enter your city.");}
+	if(_zip.toString() == ""){alert("Please enter your ZIP.");}
+	if(_phone.toString() == ""){alert("Please enter your phone number.");}
+	if(_email.toString() == ""){alert("Please enter your email.");}
+	else{
+	// Check that the ZIP and phone numbers are valid inputs.
+		var checkZip = checkNum(5);
+		var phoneInput = document.info.phone.value;
+		// Initialize variables.
+		var validPhone = false;
+		var validZip = false;
+		if(checkZip == true){
+		validZip = true;
+		}
+		else{
+			alert("Invalid ZIP Code: " + validZip);
+		}
+	// If the phone number is not valid, then inform user.
+	if(!checkPhone(phoneInput)){
+		alert("Phone number is invalid." + validPhone);
+	}
+	else{
+		validPhone = true;
+	}
+	if(validZip && validPhone){
+		alert("Your form has been verified");
+		}
+	}
+}
+// Strips hyphens out of phone number and verifies that
+// phone number is valid. Any phone number in the format
+// xxxxxxxxxx, xxx-xxx-xxxx, or (xxx)xxx-xxxx will be valid.
+function checkPhone(str){
+var regexp = /^(\d{10}|\d{3}-\d{3}-\d{4}|\(\d{3}\)\d{3}-\d{4})$/;
+return regexp.test(str);
+}
+// Function checks that the ZIP Code is valid.
+function checkNum(length){
+var zipEntry = document.info.zip.value;
+var zipNum = parseInt(zipEntry, 10);
+if (document.info.zip.value.length == length){
+if(zipNum != 0 && isNaN(zipNum) == false){
+// Valid ZIP Code
+return true;
+}
+else {
+// Invalid ZIP Code
+return false;
+}
+}
+else {
+//Too Many digits- Invalid
+return false;
+}
+}
+</script>
+</head>
+<body>
+<p>
+<center><b>Form Validation Example</b></center>
+<p>This page demonstrates how JavaScript can do form validation on a Web page.
+Using JavaScript to do validation on the client-side can greatly reduce
+processing time by reducing the chance of submitting incorrect forms.
+<hr>
+<br>
+<b>Personal Information:</b>
+<form name="info" method="post">
+<table>
+<tr>
+<td align="left">first name:</td>
+<td align="left">
+<input type="text" name="fname" size="15">
+last name:
+<input type="text" name="lname" size="20">
+</td>
+</tr>
+<br>
+<tr>
+<td align="left">Street:</td>
+<td align="left">
+<input type="text" name="street" size="30">
+</td>
+</tr>
+<br>
+<tr>
+<td align="left">City:</td>
+<td align="left">
+<input type="text" name="city" size="15">
+State:
+<select name="state">
+<option value="AL">AL</option>
+<option value="AK">AK</option>
+<option value="AZ">AZ</option>
+<option value="AR">AR</option>
+<option value="CA">CA</option>
+<option value="CO">CO</option>
+<option value="CT">CT</option>
+<option value="DE">DE</option>
+<option value="FL">FL</option>
+<option value="GA">GA</option>
+<option value="HI">HI</option>
+<option value="ID">ID</option>
+<option value="IL">IL</option>
+<option value="IN">IN</option>
+<option value="IA">IA</option>
+<option value="KS">KS</option>
+<option value="KY">KY</option>
+<option value="LA">LA</option>
+<option value="ME">ME</option>
+<option value="MD">MD</option>
+<option value="MA">MA</option>
+<option value="MI">MI</option>
+<option value="MN">MN</option>
+</select>
+ZIP:
+<input type="text" name="zip" size="7">
+</td>
+</tr>
+<br>
+<tr>
+<td align="left">Phone (w/area code):</td>
+<td align="left">
+<input type="text" name="phone" size=20>
+</td>
+</tr>
+<br>
+<tr>
+<td align="left">Email:</td>
+<td align="left">
+<input type="text" name="email" size="20">
+</td>
+</tr>
+<br>
+</table>
+<center>
+<input type="button" value="Submit" onclick="validatePersonalInfo()">
+</center>
+</form>
+</body>
+</html>

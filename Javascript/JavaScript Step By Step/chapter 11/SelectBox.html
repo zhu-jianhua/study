@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Working with Select Boxes</title>
+<script type="text/javascript">
+function displayvalue(){
+	var selected = document.forms["starform"].startype.value;
+	alert("You selected " + selected);
+	}
+</script>
+</head>
+<body>
+<form id="starform" action="" onsubmit="return false;" >
+Select A Constellation:
+<select onchange="displayvalue() name="startype">
+<option selected="selected"> </option>
+<option value = "Aquila">Aquila</option>
+<option value = "Centaurus">Centaurus</option>
+<option value = "Canis Major">Canis Major</option>
+<option value = "Canis Minor">Canis Minor</option>
+<option value = "Corona Borealis">Corona Borealis</option>
+<option value = "Crux">Crux</option>
+<option value = "Cygnus">Cygnus</option>
+<option value = "Gemini">Gemini</option>
+<option value = "Lyra">Lyra</option>
+<option value = "Orion">Orion</option>
+<option value = "Taurus">Taurus</option>
+<option value = "Ursa Major">Ursa Major</option>
+<option value = "Ursa Minor">Ursa Minor</option>
+</select>
+</form>
+
+</body>
+</html>

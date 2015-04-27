@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Using a multidimensional array</title>
+<h2>
+	<u>Brake parts inventory list</u>
+</h2>
+<script type="text/javascript">
+//Display brake part inventory in a table
+function displayInventory(table){
+	document.write("<table border=on>");
+	document.write("<th>Item Number</th><th>Item Name</th>");
+	document.write("<th>Model Number</th><th>Quantity</th>");
+	//Display each part
+	for(x=1; x<=3; x++){
+		document.write("<tr><td>",x,"</td>");
+		//Display all information for each part
+		for(y=0; y<=2; y++)
+		{
+		document.write("<td>",table[x][y],"</td>");
+		}
+		document.write("</tr>");
+}
+	document.write("</table>");
+}
+	//Create a brake parts inventory list using a
+	//multidimensional array
+	part1 = new Array("Brake Pads", "39D48G", 78);
+	part2 = new Array("Brake Shoes","7D9UK3", 45);
+	part3 = new Array("Rotors","97WOST","14");
+	brakeParts= new Array("",part1,part2,part3);
+
+	//Display the inventory of brake parts
+	displayInventory(brakeParts);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

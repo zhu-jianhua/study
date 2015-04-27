@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Deleting Elements</title>
+
+</head>
+<body>
+<script type = "text/javascript" >
+for (var i = 0; i < 3; i++) {
+	var element = document.createElement("p");
+	element.setAttribute("id","element" + i);
+	document.body.appendChild(element);
+	element.appendChild(document.createTextNode("Hello World, I'm Element " + i + "."));
+}
+var removeel = document.getElementById("element1");
+document.body.removeChild(removeel);
+</script>
+</body>
+</html>

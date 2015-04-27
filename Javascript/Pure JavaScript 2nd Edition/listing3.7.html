@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Catching a runtime error</title>
+<script type="text/javascript">
+try
+{
+	//The following line will crate a type error 
+	//because the variable aNum is underfined.
+	sum = 5 + aNum;
+	document.write("sum=", sum);
+}
+catch(e)
+{
+	if(e.name == "TypeError")
+	{
+		alert("A type error occurred.");
+	}
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

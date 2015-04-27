@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Using different methods of accessing form elements</title>
+<script type="text/javascript">
+//Function displays the car information entered.
+function showCar(){
+	//Access the car information by using the elements array.
+	var car = document.pref.elements[0].value;
+	alert("Your favorite car is: " + car);
+}
+
+//Function displays the color information entered.
+function showColor(){
+	//Access the color value directly by form name.
+	var color = document.pref.color.value;
+	alert("Your favorite color is: " + color);
+}
+</script>
+</head>
+<body>
+<form name="pref" method="post">
+Enter the name of your favorite car:
+<input type="text" name="car" size="25">
+<input type="button" name="carButton" value="Show Car"
+onclick="showCar(this.form)">
+<br>
+Enter your favorite color:
+<input type="text" name="color" size="15">
+<input type="button" name="colorButton" value="Show Color"
+onclick="showColor(this.form)">
+</form>
+</body>
+</html>

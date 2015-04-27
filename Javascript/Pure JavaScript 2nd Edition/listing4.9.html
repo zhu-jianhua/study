@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>writing information to javascript forms</title>
+<script type="text/javascript">
+//Function checks to see if the text submitted is the correct answer.
+function checkText(){
+	//Perform an equality check to see if the input is correct.
+	if(document.FormExample3.textbox.value == "Bugs Bunny"){
+		alert("You are correct!");
+	}else{
+		//If the original input was incorrect,output the
+		//correct information and inform the user.
+		document.FormExample3.textbox.value == "Bugs Bunny";
+		alert("That is incorrect.The correct answer is now in the text box.");
+		
+	}
+}
+</script>
+</head>
+<body>
+<form name="FormExample3" method="post">
+What Looney Tunes Character is gray and has long ears?
+	<input type="text" name="textbox" size="25">
+	<input type="button" name="Bugs" value="Submit"
+	onclick="checkText(this.form)">
+</form>
+</body>
+</html>

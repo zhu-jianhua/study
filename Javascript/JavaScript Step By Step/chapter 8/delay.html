@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Delay into the page so you can test it</title>
+<script type = "text/javascript">
+var started = new Date();
+var now = started.getTime();
+for (var i = 0; i < 1000000; i++) {
+//delay
+}
+</script>
+</head>
+<body>
+<p id="dateField">&nbsp;</p>
+<script type = "text/javascript">
+var bottom = new Date();
+var diff = (bottom.getTime() - now)/1000;
+var finaltime = diff.toPrecision(5);
+var dateLoc = document.getElementById("dateField");
+dateLoc.innerHTML = "Page rendered in " + finaltime + " seconds.";
+</script>
+</body>
+</html>

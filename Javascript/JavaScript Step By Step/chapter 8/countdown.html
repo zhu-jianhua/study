@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Counting down to a certain date in the future</title>
+</head>
+<body>
+<p id="dateField">&nbsp;</p>
+<script type = "text/javascript">
+var today = new Date();
+var then = new Date();
+// January 1, 2011
+then.setFullYear(2011,0,1);
+var diff = then.getTime() - today.getTime();
+diff = Math.floor(diff / (1000 * 60 * 60 * 24));
+var dateLoc = document.getElementById("dateField");
+dateLoc.innerHTML = "There are " + diff + " days until 1/1/2011";
+</script>
+</body>
+</html>

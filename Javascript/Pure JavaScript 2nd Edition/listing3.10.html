@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Debugging using the alert() method</title>
+<script type="text/javascript">
+//Create two global variables used to describe the vehicles
+var vehicleColor;
+var vehicleType;
+
+//Set the type of vehicle
+function setType(){
+	alert("Inside the setType function.");//Debug statement
+	return(vehicleType=""car");
+}
+
+//Set the color of the vehicle
+function setColor(){
+	alert("Inside the setColor function.");//Debug statement
+	return(vehicleColor="red");
+}
+
+//Debug statement
+alert("Before if statement: type="+vehicleType+" color="+vehicleColor);
+
+//If the vehicle type and color were not properly set alert the user.
+if(setType() || setColor()){
+	//Debug statement
+	alert("After if statement: type="+vehicleType+" color="+vehicleColor);
+	document.write("The "+ vehicleType + " is " + vehicleColor);
+}
+else
+	alert("The vehicle type and color could not be set");
+</script>
+</head>
+<body>
+
+</body>
+</html>

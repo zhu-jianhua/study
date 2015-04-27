@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Rollover</title>
+<script type="text/javascript" src="ehandler.js"></script>
+<script type="text/javascript">
+function rollover() {
+    var images = document.getElementsByTagName("img");
+    var imgLength = images.length;
+    var preLoad = [];
+    for (var i = 0; i < imgLength; i++) {
+        if (images[i].id.match(/rollover/)) {
+            preLoad[i] = new Image();
+            preLoad[i].src = images[i].id + "_over.png";
+            EHandler.add(images[i],"mouseover", function(i) {
+                return function() {
+                    images[i].src = images[i].id + "_over.png";
+                };
+            }(i));
+            EHandler.add(images[i],"mouseout", function(i) {
+                return function() {
+                    images[i].src = images[i].id + "_default.png";
+                };
+            }(i));
+        }
+    }
+}
+</script>
+</head>
+<body>
+<p><img id="rollover_home" name="img_home" src="rollover_home_default.png" alt="Home"></p>
+<p><img id="rollover_about" name="img_about" src="rollover_about_default.png" alt="About"></p>
+<p><img id="rollover_blog" name="img_blog" src="rollover_blog_default.png" alt="Blog"></p>
+<p><img id="logo" name="img_logo" src="logo.png" alt="Braingia Logo"></p>
+<script type="text/javascript">
+var bodyEl = document.getElementsByTagName("body")[0];
+EHandler.add(bodyEl,"load", function() { rollover(); });
+</script>
+</body>
+</html>
+

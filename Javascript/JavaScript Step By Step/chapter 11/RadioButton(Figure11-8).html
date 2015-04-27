@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Working with Radio button</title>
+<script type="text/javascript">
+var crusttype = document.forms["pizzaform"].crust;
+var crustlength = crusttype.length;
+for (var c = 0; c < crustlength; c++) {
+if (crusttype[c].checked) {
+var newelement = document.createElement("p");
+newelement.setAttribute("id","crustelement" + i);
+document.body.appendChild(newelement);
+newelement.appendChild(document.createTextNode(crusttype[c].value + " Crust"));
+}
+}
+</script>
+
+</head>
+<body>
+<form id="pizzaform" action="#" onsubmit="return false;">
+<table>
+<tr><td>Toppings</td><td>Crust</td></tr>
+<tr>
+<td><input type="checkbox" id="topping1" value="Sausage" name="toppingcheck" />Sausage</td>
+<td><input type="radio" name="crust" value="Regular" checked="checked" id="radio1" />Regular</td>
+</tr>
+<tr>
+<td><input type="checkbox" id="topping2" value="Pepperoni" name="toppingcheck" />Pepperoni</td>
+<td><input type="radio" name="crust" value="Deep Dish" id="radio2" />Deep Dish</td>
+</tr>
+<tr>
+<td><input type="checkbox" id="topping3" value="Ham" name="toppingcheck" />Ham</td>
+<td><input type="radio" name="crust" value="Thin" id="radio3" />Thin</td>
+</tr>
+<tr>
+<td><input type="checkbox" id="topping4" value="Green Peppers" name="toppingcheck" />Green Peppers</td>
+<td></td>
+</tr>
+<tr>
+<td><input type="checkbox" id="topping5" value="Mushrooms" name="toppingcheck" />Mushrooms</td>
+<td></td>
+</tr>
+<tr>
+<td><input type="checkbox" id="topping6" value="Onions" name="toppingcheck" />Onions</td>
+<td></td>
+</tr>
+<tr>
+<td><input type="checkbox" id="topping7" value="Pineapple" name="toppingcheck" />Pineapple</td>
+<td></td>
+</tr>
+</table>
+<p><input type="submit" id="formsubmit" name="formsubmit" value="Prep Pizza" onclick="prepza();" /></p>
+</form>
+</body>
+</html>

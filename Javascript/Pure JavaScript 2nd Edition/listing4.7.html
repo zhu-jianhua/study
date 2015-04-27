@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Using the Forms array to access multiple form on a page</title>
+<script language="JavaScript" type="text/javascript">
+//<!--
+// Function verifyZip checks for a valid ZIP Code. If user enters invalid
+// ZIP Code, then an alert box is used to inform the user. Function
+// takes the length as an input parameter.
+function verifyZip(length){
+// Create variable and store the form value for the ZIP input.
+var zipEntry = document.forms[0].zip.value;
+// Parse the input for an integer number using 10 as the radix.
+var zipNum = parseInt(zipEntry, 10);
+// Check to see that the length is 5.
+if (document.forms[0].zip.value.length == length){
+// Verify that the ZIP is a number.
+	if(zipNum != 0 && isNaN(zipNum) == false){
+		alert(zipEntry + " is a valid zip code");
+	} else {
+		// Inform the user if the ZIP is not valid.
+		alert("Invalid Zip Code Entered. Please Re-enter");
+	}
+} else {
+	alert("Invalid Zip Code Entered. Please Re-enter");
+	}
+}
+// Function myName displays the name the user entered.
+function myName(){
+// Get the form value of the name entered.
+var name = document.form2.name.value;
+alert("You Entered: " + name);
+}
+// -->
+</script>
+</head>
+<body>
+<p>
+<center><b>Forms Example</b></center>
+<br><br><br>
+<table>
+<form name="form1" method="post">
+	<tr>
+		<td align="right">Enter a 5 Digit Zip Code:</td>
+		<td align="left">
+			<input type= "text" name="zip" size="15">
+			<input type="button" name="button1"
+			value="Verify" onclick="verifyZip(5)">
+		</td>
+	</tr>
+</form>
+<form name="form2" action="" method="post">
+	<tr>
+		<td align="right">Enter Your Name:</td>
+		<td align="left">
+		<input type="text" name="name" size="15">
+		<input type="button" name="button2" value="Show Name"
+			onclick="myName(this.form)">
+		</td>
+	</tr>
+</form>
+</table>
+</body>
+</html>

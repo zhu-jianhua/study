@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Parent code for window example</title>
+<script type="text/javascript">
+//Function creates and opens a new child window.
+function openWin(){
+	//Open a new window named "ChildWin".
+	childWin=open("child.html", "ChildWin","toolbar,scrollbars,menubar,status,
+			width=500,height=200");
+			}
+			// Function sends a value from the parent window to the
+			// child window.
+			function sendToChild(){
+			childWin.document.childForm.childText.value =
+			document.parentForm.parenttext.value;
+			}
+</script>
+</head>
+<body>
+<p>
+<center>
+<b>Window Example - Parent Window</b>
+<br><br><br>
+</center>
+<form name="parentForm">
+Click on the Button below to open a Child window:
+<br><br>
+<input type="button" name="submit" value="Open Child Window"
+onclick="openWin()">
+<br><br><br>
+<table>
+<tr>
+<td align="left">
+<input type="text" name="parenttext" size="45">
+</td>
+<td align="left">
+<input type="button" name="submit" value="Send To Child"
+onclick="sendToChild()">
+</td>
+</tr>
+<tr>
+<td align="left">
+<input type="text" name="received" size="45">
+</td>
+<td align="left">
+This text comes from the child.
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

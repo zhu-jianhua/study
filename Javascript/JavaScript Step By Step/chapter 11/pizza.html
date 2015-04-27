@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>selecting an option with javascript</title>
+<script type = "text/javascript">
+function flip(pizzatype) {
+	if (pizzatype.value == "Veggie Special") {
+		document.forms["pizzaform"].topping.value = "veggies";
+	} else if (pizzatype.value == "Meat Special"){
+		document.forms["pizzaform"].topping.value = "meat";
+	} else if (pizzatype.value == "Hawaiian") {
+		document.forms["pizzaform"].topping.value = "hampineapple";
+	}
+}
+</script>
+</head>
+<body>
+<form id="pizzaform" action="#" onsubmit="return false;">
+<p>
+<input type="button" name="veggiespecial" onclick="flip(veggiespecial)" value="Veggie Special" />
+<input type="button" onclick="flip(meatspecial)" name="meatspecial" value="Meat Special" />
+<input type="button" onclick="flip(hawaiian)" name="hawaiian" value="Hawaiian" />
+</p>
+Main Topping: <select name="topping">
+<option value="cheese" selected="selected">Cheese</option>
+<option value="veggies">Veggies</option>
+<option value="meat">Meat</option>
+<option value="hampineapple">Ham & Pineapples</option>
+</select>
+</form>
+</body>
+</html>

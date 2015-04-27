@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Get by id</title>
+<script type = "text/javascript" >
+function changetext() {
+var p1 = document.getElementById("sometext");
+alert(p1.innerHTML);
+p1.innerHTML = "Changed Text";//运行此行后便会修改内容
+}
+</script>
+</head>
+<body onload="changetext()">
+<p id="sometext">Here's some text.</p>
+<p id="moretext">Here's more text.</p>
+<p id="linkp">Link to the <a id="w3link" href="http://www.w3.org">W3</a></p>
+
+</body>
+</html>

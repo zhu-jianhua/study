@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hacking javascript validation</title>
+<script type = "text/javascript">
+function formValid() {
+	if (document.forms["catalogform"]["quantity"].value > 3) {
+		alert("Limit 3 per Household.");
+		return false;
+	} else {
+		return true;
+	}
+}
+</script>
+</head>
+<body>
+<form name="catalogform" id="catalogform" action="catalog.php" method="POST">
+<p>Order Blades of Grass From Steve Suehring's Lawn</p>
+<div id="lawndiv"><img alt="steve suehring's lawn is dead" src="lawn.png"
+id="lawnpic"><br/></div>
+<p>Description: Steve is terrible at lawn care, therefore there's not much
+grass on his lawn. Quantities are extremely limited.</p>
+<p>Price: $100.00 per blade</p>
+<p>Quantity to order (Limit 3 per Household): <input type="text" name="quantity"></p>
+<p><input type="submit" onclick="return formValid();" value="Place Order"></p>
+</form>
+</body>
+</html>

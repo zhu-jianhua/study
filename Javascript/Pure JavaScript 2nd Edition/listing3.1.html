@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Using regular expressions</title>
+<script type="text/javascript">
+//Create a text string 
+var str = "John traded 5 oranges for 135 grapes.<br>";
+
+//Create RegExp object
+var span3to5 = new RegExp("[3-5]","g");
+
+document.write(str);
+document.write("Replace digits 3 to 5 with nine.<br>");
+document.write(str.replace(span3to5,"9"));
+</script>
+</head>
+<body>
+
+</body>
+</html>

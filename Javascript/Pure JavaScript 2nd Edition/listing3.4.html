@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Creating a timed event with the setInterval() method</title>
+<script type="text/javascript">
+function dailyTask(){
+	var today = new Date();
+	if((today.getHours() == 8) && (today.getMinutes() == 0)){
+		alert("It is 8:00 a.m. ");
+		clearInterval(timerID);
+	}	
+}
+//Set interval to 20,000 milliseconds
+timerID = setInterval("dailyTask()", 20000);
+</script>
+</head>
+<body>
+
+</body>
+</html>

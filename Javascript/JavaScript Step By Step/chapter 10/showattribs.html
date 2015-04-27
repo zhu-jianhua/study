@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Show attribs</title>
+<script type = "text/javascript">
+function showattribs(e) {
+	var e = document.getElementById("braingialink");
+	ar elemList = "";
+	for (var element in e) {
+		var attrib = e.getAttribute(element);
+		elemList = elemList + element + ": " + attrib + "\n";
+	}
+	alert(elemList);
+}
+</script>
+</head>
+<body>
+<a onclick="showattribs()" href="http://www.braingia.org" id="braingialink">Steve Suehring's Web Site</a>
+<script type = "text/javascript" >
+</script>
+</body>
+</html>

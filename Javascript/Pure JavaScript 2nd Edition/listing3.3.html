@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Canceling the submit event</title>
+<script type="text/javascript">
+function validatePassword()
+{
+	passwd = document.passwordForm.password.value;
+	//Password must be between 3 and 15 characters
+	if((passwd.length < 3) || (passwd.length > 15))
+	{
+		alert(“Password must be less than 15 characters but greater than 3!");
+		return(false);
+	}
+}
+</script>
+<center>
+<h1>Password Change Page</h1>
+Please enter your user name and new password.<br>
+(Password must be between 3 and 15 characters.)<br><br>
+<form name="passwordForm"
+action="success.html"
+onSubmit="return validatePassword()">
+Username: <input type="text" name="username"><br>
+Password: <input type="password" name="password"><br>
+<input type="submit">
+</form>
+</head>
+<body>
+
+</body>
+</html>

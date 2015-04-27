@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Using the addition operator on numeric and string values</title>
+<script type="text/javascript">
+//Declare 2 numeric variables and 2 string variables
+var sStringVar1 = "Hello";
+var sStringVar2 = "World";
+var nNumVar1 = 5;
+var nNumVar2 = 10;
+// Apply the addition operator to create 3 totals
+var sStringTotal = sStringVar1 + sStringVar2;
+var nNumTotal = nNumVar1 + nNumVar2;
+var sStringNumTotal = sStringTotal + nNumTotal;
+// Use the document.write() function to write the totals to the page
+// Notice that we even use the addition operator in place of a comma
+// to concatenate the results with some text on the page.
+document.write("<b>The string total is: </b>"+sStringTotal+"<br>");
+document.write("<b>The numeric total is: </b>",nNumTotal,"<br>");
+document.write("<b>The string + numeric total is: </b>",sStringNumTotal);
+</script>
+</head>
+<body>
+
+</body>
+</html>

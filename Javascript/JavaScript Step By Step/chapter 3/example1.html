@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+function cubme(incomingNum){
+	if(incomingNum == 1){
+		return "what are you doing?";		
+	}else{
+	return Math.pow(incomingNum,3);
+	}
+}
+	</script>
+<title>A Chapter 3 Example</title>
+</head>
+<body>
+<script type="text/javascript">
+var theNum = 2;
+var finalNum = cubme(theNum);
+
+if(isNaN(finalNum)){
+	alert("You should know that 1 to any power is 1.");
+}else{
+	alert("When cubed, " + theNum + " is " + finalNum);
+}
+</script>
+</body>
+</html>

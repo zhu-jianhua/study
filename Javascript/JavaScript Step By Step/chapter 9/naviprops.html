@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Looking at the navigator Object</title>
+<script type = "text/javascript" >
+function showProps() {
+	var body = document.getElementsByTagName("body")[0];
+	for (var prop in navigator) {
+	var elem = document.createElement("p");
+	var text = document.createTextNode(prop + ": " + navigator[prop]);
+	elem.appendChild(text);
+	body.appendChild(elem);
+	}
+}
+	</script>
+</head>
+<body onload="showProps()">
+
+</body>
+</html>

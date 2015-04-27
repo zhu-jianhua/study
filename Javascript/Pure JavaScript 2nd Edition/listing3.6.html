@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Password validation using the try...catch block</title>
+<script type="text/javascript">
+function ValidatePassword(password)
+{
+	try
+	{
+		//Make sure password has at least 5 characters
+		if(password.length < 5)
+		{
+			throw "SHORT";
+		}
+		//Make sure password has no more than 10 characters
+		if(password.length > 10)
+		{
+			throw "LONG";	//too many characters
+		}
+		//Password ok
+		alert("Password Validated!");	
+	}
+	catch(e)
+	{
+		if(e == "SHORT")
+		{
+			alert("Not enough characters in password!");	
+		}
+		if(e == "LONG")
+		{
+			alert("Password contains too many characters!");
+		}
+	}	
+	
+}
+</script>
+<h2>Password Validator</h2>
+</head>
+<body>
+<form name="myform">please enter password: <input type="password" name="password"><br><br>
+<input type=button name="validate" value="Validate!" onclick="ValidatePassword(myform.password.value)">
+</form>
+</body>
+</html>

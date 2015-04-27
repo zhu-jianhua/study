@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/* Define default values for the whole site */
+body {
+	text-align: center;
+}
+/* Container holds all visible page elements */ 
+/*   #container {  */
+/*   width:300px; */
+/* /*   margin-top:20px; */ */
+/* /*   margin-left:auto; */ */
+/* /*   margin-right:auto; */ */
+/* /*   margin-bottom:1em; */ */
+/* 	margin: 20px auto 1em auto; */
+/* /*   padding: 20px;  */ */
+/*   border: 1px solid #000;  */
+/*   background: #CCC;  */
+/* /*   padding-top: 20px; */ */
+/* /*   padding-left: 10%; */ */
+/* /*   padding-right: 1em; */ */
+/* /*   padding-bottom: 0; */ */
+/* 	padding: 20px 1em 0 10%; */
+/*   border-style: dashed dotted solid ridge; */
+/*   } */
+
+#container {
+	width: 400px;
+	margin: 10px auto 10px auto;
+	padding: 20px;
+	border-style: dashed dotted solid ridge;
+	border-top-width: thin;
+	border-right-width: 20px;
+	border-bottom-width: medium;
+	border-left-width: thick;
+}
+/* Define styling of our reusable box */
+.box {
+margin: 10px;
+padding: 20px;
+border: 1px solid #000;
+}
+/* Make text red only for paragraphs within the box class */
+.box p {
+	color:#F00;
+}
+/* Make text gray only for paragraphs within the container */
+#container p {
+	color:#333;
+}
+
+/* Make text bold only for paragraphs within the box class AND within the container */
+#container .box p {
+	font-weight:bold;
+}
+</style>
+</head>
+<body>
+<div id="container"> 
+ <p>This is our content area.</p> 
+ <div class="box">
+ <p>I'm in a box!</p>
+ </div>
+ <div class="box">
+ <p>I'm also in a box!</p>
+ </div>
+</div>
+<div class="box">
+	<p>I'm also in a box!</p>
+</div>
+</body>
+</html>

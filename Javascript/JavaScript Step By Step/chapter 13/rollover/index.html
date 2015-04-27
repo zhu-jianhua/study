@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Creating portable rollovers</title>
+<script type="text/javascript">
+function rollover() {
+	var images = document.getElementsByTagName("img");
+	for (var i = 0; i < images.length; i++) {
+			images[i].onmouseover = function() { this.src = this.id + "_over.png"; }
+			images[i].onmouseout = function() { this.src = this.id + "_default.png"; }
+	}
+}
+		window.onload = rollover;
+		</script>
+</head>
+<body>
+<p><img id="home" name="img_home" src="home_default.png" alt="Home"></p>
+<p><img id="about" name="img_about" src="about_default.png" alt="About"></p>
+<p><img id="blog" name="img_blog" src="blog_default.png" alt="Blog"></p>
+</body>
+</html>

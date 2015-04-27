@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Using strings for array indexes</title>
+<h2><u>Clothing store inventory</u></h2>
+<script type="text/javascript">
+//Populate an array with product quantities
+function populateArray(products){
+	products["shirts"]=46;
+	products["pants"]=23;
+	products["hats"]=14;
+	products["socks"]=153;
+	
+}
+
+//Display product quantities
+function displayArray(products){
+	document.write(products['shirts'],"shirts.<br>");
+	document.write(products['pants']," pants.<br>");
+	document.write(products['hats']," hats.<br>");
+	document.write(products['socks']," pairs of socks.");
+}
+
+//Create a product quantity array
+var productQty = new Array();
+
+//Set product quantities
+populateArray(productQty);
+
+//Display the produt quantities
+displayArray(productQty);
+</script>
+</head>
+<body>
+
+</body>
+</html>
