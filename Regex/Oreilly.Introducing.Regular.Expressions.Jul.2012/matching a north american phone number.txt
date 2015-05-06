@@ -1,0 +1,37 @@
+707-827-7019
+
+[0-9] : matching digits with a character class
+
+[012789] only those digits list,that is 0,1,2,7,8 and 9
+
+\d : using a character shorthand
+\D : match any character that is not a digit
+.  : match any character
+
+capturing groups and back references（逆向引用）
+(\d)\d\1
+(\d): 匹配第1个数字(7)
+\d  : 匹配下一个数字(0)，但不捕捉它因为它不在括号内
+\1  : 捕捉数字(7)
+
+using quantifiers
+? : zero or one
++ : one or more
+* : zero or more
+
+(\d{3,4}[.-]?)+
+( : open a capturing group
+\ : start character shorthand(escape the following character)
+d : end character shorthand(match any digit in the range 0 through 9 with \d)
+{ : open quantifier
+3 : minimum quantity to match
+, : separate quantities
+4 : maximum quantity to match
+} : close quantifer
+[ : open character class
+. : dot or period(matches literal dot)
+- : literal character to match hyphen
+] : close character class
+? : zero or one quantifier
+) : close capturing group
++ : one or more quantifier
