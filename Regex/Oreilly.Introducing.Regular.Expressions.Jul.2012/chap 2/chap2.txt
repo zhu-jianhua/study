@@ -1,0 +1,13 @@
+\d : matching digits
+
+\D : matching Non-Digits
+i.e [^0-9] the same as [^\d]
+
+\w : matching word 
+
+\D : Non-word character
+
+the difference between \D and \w is that
+\D matches whitespace,punctuation,quotation marks,hyphens,forward slashes,square brackets and othe similar character
+\w matches letters and numbers
+in english, \w matches the same as [a-zA-Z0-9]
