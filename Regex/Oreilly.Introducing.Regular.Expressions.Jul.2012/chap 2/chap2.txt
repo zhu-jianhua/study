@@ -11,3 +11,18 @@ the difference between \D and \w is that
 \D matches whitespace,punctuation,quotation marks,hyphens,forward slashes,square brackets and othe similar character
 \w matches letters and numbers
 in english, \w matches the same as [a-zA-Z0-9]
+
+\s or [\t\n\r] : matching whitespace
+it matches:
+spaces 
+tab(\t)
+line feeds(\n)
+carriage return(\r)
+
+\S or [^ \t\n\r] or [^\s] : matches non-whitespace
+
+\bA.{5}T\b
+\b : matches a word boundary
+A | T : bound限制 the sequence范围 of characters
+.{5} : matches any five characters
+\b : match another word boundary
