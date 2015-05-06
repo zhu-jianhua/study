@@ -14,7 +14,7 @@ capturing groups and back references（逆向引用）
 \d  : 匹配下一个数字(0)，但不捕捉它因为它不在括号内
 \1  : 捕捉数字(7)
 
-using quantifiers
+Using Quantifiers
 ? : zero or one
 + : one or more
 * : zero or more
@@ -35,3 +35,29 @@ d : end character shorthand(match any digit in the range 0 through 9 with \d)
 ? : zero or one quantifier
 ) : close capturing group
 + : one or more quantifier
+
+Quoting Literals 
+^(\(\d{3}\)|^\d{3}[.-]?)?\d{3}[.-]?\d{4}$
+^(caret) : at the beginning of the regex or following the vertical bar（|）,means that the phone number will be at the beginnig of a line.
+( : open a capturing group
+\( : is literal open parenthesis.
+\d : matches a digit
+{3} : is a quantifier that, following \d, matches exactly three digits
+\) : matches a literal close parenthesis
+| : inicates alternation
+^ : matches the beginning of a line
+\d : the same up
+{3} : the same up
+[.-]? : match an optional dot or hyphen
+) : close capturing group
+? : make the group optional,that is, the prefix in the group is not required.
+\d : match a digit
+{3} : the same up
+[.-]? : match an optional dot or hyphen
+\d : match a digit
+{4} : matches exactly four digits
+$ : matches the end of a line
+
+
+
+
