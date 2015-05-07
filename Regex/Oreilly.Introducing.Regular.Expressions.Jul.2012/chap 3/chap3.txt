@@ -1,0 +1,5 @@
+^ : the beginning of a line
+$ : the end of a line 
+\b : word boundary i.e \bTHE\b
+\B : non-word boundary i.e \Be\B
+\< \> : another word boundary

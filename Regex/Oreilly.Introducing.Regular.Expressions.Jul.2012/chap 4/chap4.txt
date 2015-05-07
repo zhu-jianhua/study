@@ -1,0 +1,23 @@
+(the|The|THE) : alternation
+
+(?i) : Case Insensitive
+
+(t|T)h(e|eir) : subpatterns the pattern will match any of :
+the The their Their
+
+\b[tT]h[ceinry]*\b
+\b : matches a beginning word boundary
+[tT] : matches either an lowercase t or an uppercase T
+then matches(or attempts to match) a lowercase h
+[ceinry] : match a character class [ceinry]
+* : zero or more
+\b : matches end word boundary
+
+capturing groups and backreferences
+
+Non-Capturing Groups
+
+Atomic Groups : (?>the)
+
+
+
