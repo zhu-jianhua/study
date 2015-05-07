@@ -1,0 +1,8 @@
+(?i)ancyent (?=marinere) : Positive Lookaheads
+(?i) : case-insentitive(不区分大小写)
+
+(?i)ancyent (?!marinere) : Negative lookaheads
+
+(?i)(?<=ancyent) marinere : Positive Lookbehinds
+
+(?i)(?<ancyent) marinere : Negative Lookbehinds
