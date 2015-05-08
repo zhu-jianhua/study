@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Divs and Contextual Selectors</title>
+<style type="text/css">
+/* The Bad Way: Make text red */ 
+ .highlight { 
+  color: #F00; 
+  } 
+/* Make text gray only for paragraphs within the container */ 
+#container p { 
+  color: #333; 
+  }
+/*The Good Way: Make text red only for paragraphs within the box class */ 
+ .box p { 
+  color: #F00; 
+  }   
+   
+</style>
+</head>
+<body>
+<div id="container"> 
+ <p>This is our content area.</p> 
+  <div class="box"> 
+   <p class="highlight">I'm in a box!</p> 
+  </div> 
+  <div class="box"> 
+   <p class="highlight">I'm also in a box!</p> 
+  </div> 
+</div>
+</body>
+</html>

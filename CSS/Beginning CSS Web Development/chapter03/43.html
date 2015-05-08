@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Taking the Context Even Further</title>
+<style type="text/css">
+/* Make text bold only for paragraphs within the box class AND within the ➥ 
+container */ 
+#container .box p { 
+  font-weight:bold; 
+  } 
+</style>
+</head>
+<body>
+<div id="container"> 
+<!-- within the container but not within the box class are unaffected -->
+ Content 
+  <div class="box"> 
+   <p>I'm in a box!</p> 
+  </div> 
+  <div class="box"> 
+   <p>I'm also in a box!</p> 
+  </div> 
+</div> 
+<div class="box"> 
+<!-- within boxes outside of the container are unaffected -->
+ <p>I'm also in a box!</p> 
+</div>
+</body>
+</html>
