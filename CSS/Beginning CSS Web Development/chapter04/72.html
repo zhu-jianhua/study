@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>More Font Shorthand</title>
+<style type="text/css">
+p { 
+  font-style:italic; 
+  font-variant:small-caps; 
+  font-weight:bold; 
+  font-size:12px; 
+  font-family:verdana,arial,sans-serif; 
+  line-height:150%; 
+}
+</style>
+</head>
+<body>
+<p>
+注意其顺序（the order is very important）
+p { 
+  font: style variant weight size/line-height family 
+}
+</p>
+其组合版为:
+p { 
+  font: italic small-caps bold 12px/150% verdana,arial,sans-serif 
+}
+</body>
+</html>
