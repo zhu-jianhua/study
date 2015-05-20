@@ -1,0 +1,5 @@
+<!ELEMENT recipe (ingredients, directions, servings)>
+<!ATTLIST recipe name CDATA #REQUIRED>
+<!ELEMENT ingredients (#PCDATA)>
+<!ELEMENT directions (#PCDATA)>
+<!ELEMENT servings (#PCDATA)>

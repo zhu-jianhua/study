@@ -1,0 +1,44 @@
+<!-- Listing 37-1: titlehelp.html -->
+<html>
+<head>
+<title>titlehelp.html</title>
+</head>
+<body>
+<center>
+<table width="550">
+<tr bgcolor= #FF9933><td align="center"><BR><H3>The ThrillerGuide.com<BR>"What was the name of that thriller?"<BR> Form</H3></td></tr>
+<tr><td>
+Did you once read an unforgettable thriller, but now you can't remember the name?  Fill out as many of the fields below as you can, press the button to submit, and we'll search our sources and e-mail you back.
+</td></tr></table>
+</center>
+
+<FORM METHOD=post ACTION="TitleHelp.php">
+<P>First name: <input type="text" size=30 name="FirstName">
+<P>Last name: <input type="text" size=30 name="LastName">
+<P>Your Email Address: <input type="text" size=30 name="Email">
+<P>In approximately what year did the action of the book occur? <input type="text" size=4 name="Year">
+<P>Can you remember any settings from the book? <input type="text" size=30 name="Setting">
+<P>The gender of the protagonist(s) was: <br>
+<ul>
+<input TYPE="radio" NAME="Gender" VALUE=1>Female<br>
+<input TYPE="radio" NAME="Gender" VALUE=2>Male<br>
+<input TYPE="radio" NAME="Gender" VALUE=3>One of each<br>
+<input TYPE="radio" NAME="Gender" VALUE=4>Two males<br>
+<input TYPE="radio" NAME="Gender" VALUE=5>Two females<br>
+</ul>
+<P>When the book first came out, it was: <br>
+<ul>
+<input TYPE="radio" NAME="Status" VALUE=1>A bestseller<br>
+<input TYPE="radio" NAME="Status" VALUE=2>A critic's darling<br>
+<input TYPE="radio" NAME="Status" VALUE=3>Neither<br>
+<input TYPE="radio" NAME="Status" VALUE=4>I don't know<br>
+</ul>
+<P>Please tell us anything else you can remember about this title (plot, characters, settings, cover, movie versions, etc.):
+<br><textarea NAME="Other" ROWS=6 COLS=50></textarea>
+<P><input type="submit" name="Submit">
+</body>
+</html>
+
+
+
+

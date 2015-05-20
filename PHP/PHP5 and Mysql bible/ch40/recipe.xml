@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE recipe [
+<!ELEMENT recipe (ingredients, directions, servings)>
+<!ATTLIST recipe name CDATA #REQUIRED>
+<!ELEMENT ingredients (#PCDATA)>
+<!ELEMENT directions (#PCDATA)>
+<!ELEMENT servings (#PCDATA)>
+]>
+
+<recipe name ="Beef Burgundy">
+ <ingredients>Beef</ingredients>
+ <ingredients>Burgundy</ingredients>
+ <directions>
+ Add beef to burgundy. Serve.
+ </directions>
+ <servings>12</servings>
+</recipe>
+

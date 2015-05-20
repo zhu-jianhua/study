@@ -1,0 +1,32 @@
+<!-- Listing 38-1: A JavaScript and PHP navigation form (navigation.html) -->
+<html>
+<head>
+<title>Navigation pulldown</title>
+<script language="JavaScript">
+<!--
+function Browse(form, i){
+  var site = form.elements[i].selectedIndex;
+  if(site > 0){
+    top.location = form.elements[i].options[site].value
+  }
+}
+// -->
+</script>
+</head>
+
+<body>
+<form method="post" action="redirect.php">
+<select name="category" onChange="Browse(this.form,0)">
+<option selected value=0>Choose a Category</option>
+<option value="desktop.php">Desktops</option>
+<option value="laptop.php">Laptops</option>
+<option value="monitor.php">Monitors</option>
+<option value="input.php">Input devices</option>
+<option value="storage.php">Storage devices</option>
+</select>
+<input type="submit"">
+</form>
+</body>
+</html>
+
+

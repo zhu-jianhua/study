@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<book>
+ <publisher>IDG Books</publisher>
+ <title>PHP5 Bible</title>
+ <chapter title="PHP and XML">
+  <section title="What is XML?">
+   <paragraph>
+If you know HTML, you're most of the way to understanding XML.
+   </paragraph>
+   <paragraph>
+They are both markup languages, but XML is more structured than HTML.
+   </paragraph>
+  </section>
+ </chapter>
+</book>

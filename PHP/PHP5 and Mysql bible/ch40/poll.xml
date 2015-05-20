@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<PollDefs>
+<Poll id="Best_Text_Editor">
+  <StartDate>01/01/200333</StartDate>
+  <EndDate>01/31/2004</EndDate>
+  <question>Which is the best programmer's editor?</question>
+  <display type="Bar-Graph"/>
+  <responseSet>
+    <response id="Best_Text_Editor-emacs">emacs</response>
+    <response id="Best_Text_Editor-vim">vim</response>
+    <response id="Best_Text_Editor-notepad">notepad</response>
+    <response id="Best_Text_Editor-kate">kate</response>
+    <response resource="Best_Text_Editor-BBEdit">BBEdit</response>
+  </responseSet>
+</Poll>
+
+<Poll id="Best_Pointer_Device">
+  <StartDate>02/01/2004</StartDate>
+  <EndDate>02/29/2004</EndDate>
+  <question>Which is the best pointer device?</question>
+  <display type="Bar-Graph"/>
+  <responseSet>
+    <response id="Best_Pointer-mouse">Mouse</response>
+    <response id="Best_Pointer-trackball">Trackball</response>
+    <response id="Best_Pointer-touchpad">Touchpad</response>
+    <response id="Best_Pointer-trackpoint">TrackPoint</response>
+    <response id="Best_Pointer-pen">Pen</response>
+    <response id="Best_Pointer-stylus">Stylus</response>
+  </responseSet>
+</Poll>
+
+</PollDefs>

@@ -1,0 +1,87 @@
+<!-- Listing 38-6: Frameset (sandwich_frames.html) -->
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function deselectAllOthers(boxVals) {
+  for (var x = 1; x < boxVals.length; x++) {
+    boxVals[x].checked=false;
+  }
+}
+
+function confirmOne(boxVals) {
+  var count = 0;
+  for (var x = 1; x < boxVals.length; x++) {
+    if (boxVals[x].checked == false) {
+      count++;
+    }
+  }
+  if (count == (boxVals.length - 1)) {
+    boxVals[0].checked = true;
+  } else {
+    boxVals[0].checked = false;
+  }
+}
+
+function toArray(boxVals) {
+  for (var x = 0; x < boxVals.length; x++) {
+    var valArray = boxVals[x].name+"[]";
+    boxVals[x].name = valArray;
+  }
+}
+
+// -->
+</script>
+</HEAD>
+
+<BODY BGCOLOR=#FCFCF0 onLoad="document.selector.submit();">
+
+<TABLE CELLPADDING=20>
+<TR>
+<TD VALIGN="top">
+<B>Order a sandwich with...</B>
+<BR><BR>
+<FORM NAME="selector" TARGET="results" METHOD="post" ACTION="results.php">
+<B>Fillings (check one or more)</B><BR><BR>
+<INPUT TYPE="checkbox" name="filling" value="everything" checked onClick="deselectAllOthers(document.selector.filling); confirmOne(document.selector.filling); toArray(document.selector.filling); submit();"> Everything
+<BR>
+<INPUT TYPE="checkbox" name="filling" value="turkey" onClick="confirmOne(document.selector.filling); toArray(document.selector.filling); submit();"> Turkey
+<BR>
+<INPUT TYPE="checkbox" name="filling" value="roastbeef" onClick="confirmOne(document.selector.filling); toArray(document.selector.filling); submit();"> Roast beef
+<BR>
+<INPUT TYPE="checkbox" name="filling" value="pastrami" onClick="confirmOne(document.selector.filling); toArray(document.selector.filling); submit();"> Pastrami
+<BR>
+<INPUT TYPE="checkbox" name="filling" value="eggplant" onClick="confirmOne(document.selector.filling); toArray(document.selector.filling); submit();"> Eggplant
+<BR>
+</TD>
+<TD VALIGN="top"><BR><BR>
+<B>Cheese</B><BR><BR>
+<SELECT NAME="cheese" onChange="submit();">
+<OPTION VALUE="none">None</OPTION>
+<OPTION VALUE="cheddar">Cheddar</OPTION>
+<OPTION VALUE="swiss">Swiss</OPTION>
+<OPTION VALUE="camembert">Camembert</OPTION>
+<OPTION VALUE="bleu">Blue</OPTION>
+<OPTION VALUE="cottage">Cottage</OPTION>
+</SELECT>
+<BR><BR>
+</TD>
+<TD VALIGN="top"><BR><BR>
+<B>Bread</B><BR><BR>
+<SELECT NAME="bread" onChange="submit();">
+<OPTION VALUE="white">White</OPTION>
+<OPTION VALUE="wheat">Wheat</OPTION>
+<OPTION VALUE="rye">Rye</OPTION>
+<OPTION VALUE="kaiser">Kaiser roll</OPTION>
+<OPTION VALUE="onion">Onion roll</OPTION>
+<OPTION VALUE="dutch">Dutch crunch</OPTION>
+</SELECT>
+</FORM>
+<BR><BR>
+</TD>
+</TR></TABLE>
+</BODY>
+</HTML>
+
+

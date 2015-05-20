@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE recipe SYSTEM "recipe.dtd">
+
+<recipe name ="Beef Burgundy">
+ <ingredients>Beef</ingredients>
+ <ingredients>Burgundy</ingredients>
+ <directions>
+ Add beef to burgundy. Serve.
+ </directions>
+ <servings>12</servings>
+</recipe>
