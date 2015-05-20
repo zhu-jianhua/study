@@ -1,5 +1,6 @@
 <!-- Listing 8-2: Exercise Calculator - Form handler using string functions -->
-<?php$exercise = $_POST['exercise']; // NOTE: only works in PHP 4.1+
+<?php
+$exercise = $_POST['exercise']; // NOTE: only works in PHP 4.1+
 // Make sure they aren't trying to do naughty things
 if (strlen($exercise) > 50) {
   echo "You aren't playing by the rules.  Bad dog!";
