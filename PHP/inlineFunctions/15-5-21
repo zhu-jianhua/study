@@ -1,15 +1,26 @@
 ====string_functions====
 string strtolower(string $string)
 make a string lowercase
+string strtoupper(string $string)
+make a string uppercase
 
 array explode(string $delimiter, string $string [,int $limit])
 split string by string
+string implode(string $glue,array $pieces) OR string implode(array $pieces)
+join array elements with a string
 
-string trim(string $str [, string $character_mask="\t\n\t\0\x0B"])
+string trim(string $str [, string $character_mask="\t\n\r\0\x0B"])
 strip whitespace(or other characters)from the beginning and end of a string
+string ltrim(string $str [, string $character_mask]
+strip whitespace(or other characters)from the beginning of a string
+string rtrim(strin $str [, string $character_mask]
+strip whitespace(or other characters)from the end of a string
 
 mixed str_replace(mixed $search, mixed $replace, mixed $subject [,&$count])
 replace all occurrence of the search string with the replacement string
+mixed substr_replace(mixed $string, mixed $replace, mixed $start [, $mixed $length])
+replace text within a portion of a string
+
 
 ====filesystem_functions=====
 
@@ -18,6 +29,8 @@ file or directory exist
 
 string dirname(string $path)
 returns parent directory's pathname
+string basename(string $path [, string $suffix])
+returns trailing name component of path
 
 
 ====variable_handing_functions====
