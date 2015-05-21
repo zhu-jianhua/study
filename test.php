@@ -1,10 +1,5 @@
 <?php
-$d = dir("/home/zjhxmjl/Desktop/dokuwiki");
-// echo "Handle: " . $d->handle . "<br />";
-// echo "Path: " . $d->path . "<br />";
-// while (false !== ($entry = $d->read())) {
-//    echo $entry."<br />";
-// }
-// $d->close();
-print_r ($d);
+echo "1) " . dirname("/etc/passwd") . PHP_EOL; // 1) /etc
+echo "2) " . dirname("/etc/") . PHP_EOL; // 2) / (or \ on Windows)
+echo "3) " . dirname("."); // 3) .
 ?>

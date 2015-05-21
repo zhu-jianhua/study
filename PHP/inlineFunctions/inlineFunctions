@@ -1,0 +1,35 @@
+====string_functions====
+string strtolower(string $string)
+make a string lowercase
+
+
+
+====filesystem_functions=====
+
+bool file_exists(string $filename)
+file or directory exist
+
+string dirname(string $path)
+returns parent directory's pathname
+
+
+====variable_handing_functions====
+bool isset(mixed $var [, mixed $...])
+a variable is set and not NULL
+
+
+
+====date_time_functions====
+mixed microtime([bool $get_as_float = false])
+return current unix timestamp with microseconds
+
+====predefined_variables====
+$_GET
+$_SERVER
+
+====predefined_constants====
+PHP_EOL
+
+====output_control_functions====
+bool ob_start([callable $output_callback = NULL [,int $chunk_size=0 [,int $flags=PHP_OUTPUT_HANDLER_STDFLAGS] ] ])
+turn on output buffering
