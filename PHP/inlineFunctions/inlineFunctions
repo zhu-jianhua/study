@@ -2,7 +2,14 @@
 string strtolower(string $string)
 make a string lowercase
 
+array explode(string $delimiter, string $string [,int $limit])
+split string by string
 
+string trim(string $str [, string $character_mask="\t\n\t\0\x0B"])
+strip whitespace(or other characters)from the beginning and end of a string
+
+mixed str_replace(mixed $search, mixed $replace, mixed $subject [,&$count])
+replace all occurrence of the search string with the replacement string
 
 ====filesystem_functions=====
 
