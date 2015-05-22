@@ -36,7 +36,8 @@ returns trailing name component of path
 ====variable_handing_functions====
 bool isset(mixed $var [, mixed $...])
 a variable is set and not NULL
-
+bool empty(mixed $var)
+determine whether a variable is empty
 
 
 ====date_time_functions====
